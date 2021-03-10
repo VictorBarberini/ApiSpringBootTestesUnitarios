@@ -1,0 +1,38 @@
+version: "3"
+services:
+    db:
+        image: mysql:5.7
+        container_name: mysql-container
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: Compasso_SpringBoot
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root
+        networks:
+            - docker-network
+        healthcheck:
+            test: "/usr/bin/mysql --user=root --password=root --execute \"SHOW DATABASES;\""
+            interval: 2s
+            timeout: 20s
+            retries: 10    
+    api:
+        build:
+            dockerfile: ./Dockerfile
+            context: .
+        image: victorbarberini/api-springboot
+        container_name: api-container
+        restart: always
+        ports:
+            - "8080:8080"
+        depends_on:
+            - db
+        environment:
+            SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/Compasso_SpringBoot
+        networks:
+            - docker-network
+networks:
+    docker-network:
+        driver: bridge
