@@ -1,6 +1,4 @@
-# API Spring Boot Docker
-
-O projeto **API Spring Boot - Cadastro de Produtos** agora rodando em containers Docker
+# API Spring Boot Testes Unitários
 
 ---
 
@@ -31,6 +29,12 @@ A aplicação utiliza a porta 8080
 Os testes podem ser feitos através do [Postman](https://www.postman.com/)
 
 É possivel realizar testes e ver a documentação do projeto através do *Swagger* <http://localhost:8080/swagger-ui.html>
+
+---
+
+## Testes unitários
+
+É possivel realizar os testes unitários atravéz da classe "ProdutoRepositoryTest.java"
 
 ---
 
