@@ -34,7 +34,7 @@ Os testes podem ser feitos através do [Postman](https://www.postman.com/)
 
 ## Testes unitários
 
-É possivel realizar os testes unitários atravéz da classe "ProdutoRepositoryTest.java"
+O teste unitário do controller pode ser feito através da classe "ProdutoControllerTest"
 
 ---
 
