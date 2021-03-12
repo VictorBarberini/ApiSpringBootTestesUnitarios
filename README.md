@@ -6,10 +6,10 @@
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/VictorBarberini/ApiSpringBootDocker
+$ git clone https://github.com/VictorBarberini/ApiSpringBootTestesUnitarios
 
 # Acesse a pasta do projeto
-$ cd ApiSpringBootDocker
+$ cd ApiSpringBootTestesUnitarios
 ```
 
 ---
